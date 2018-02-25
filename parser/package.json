@@ -1,0 +1,13 @@
+{
+  "name": "selenium_web_driver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "chromedriver": "^2.35.0",
+    "selenium-webdriver": "3"
+  },
+  "scripts": {
+    "serve": "node index.js"
+  }
+}
