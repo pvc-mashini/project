@@ -155,6 +155,9 @@ footer{
 	color:white;
 	background:#e8491d;
 	margin-top: 20px;
+}
+
+footer h3,h6{
 	text-align: center;
 }
 

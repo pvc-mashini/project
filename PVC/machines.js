@@ -28,7 +28,7 @@ function renderTechParams(techParams){
 	return `${techParams.map(techParam=> `
     <div class="row">
 		<div class="col-md-4">${techParam.key}</div>
-    <div class="col-md-8">${techParam.value}</div>
+    	<div class="col-md-8">${techParam.value}</div>
     </div>
 		`).join("")}`;
 }
@@ -155,7 +155,25 @@ function renderMachinesSection(){
 function renderFooter(){
 	const footerMarkup = `
 		<footer id="footer">
-			<p>Acme Web Design Copyright &copy; 2018</p>
+		<h3>Contact Us</h3>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<h4>Head office: Turkey, Bursa</h4>
+				email: info.pvc.mashini@gmail.com<br>
+				<i class="fa fa-skype" aria-hidden="true"></i> mumhum1<br>
+				<i class="fa fa-phone" aria-hidden="true"></i> +90 534 391 74 16<br><br>
+			</div>
+			<div class="col-md-3">
+				<h4>Bulgaria, Kardzhali</h4>
+				email: pvc.mashini.bulgaria@gmail.com<br>
+				<i class="fa fa-whatsapp" aria-hidden="true"></i> +359 882 79 25 14<br>
+				<i class="fa fa-phone" aria-hidden="true"></i> +359 878 37 19 22<br><br>
+			</div>
+			<div class="col-md-3"></div>
+	    </div>
+		
+			<h6>Acme Web Design Copyright &copy; 2018</h6>
 		</footer>
 	`;
 
