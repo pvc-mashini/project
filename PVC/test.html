@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Acme Web Design | Welcome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Affordable and professional web design">
+    <meta name="keywords" content="web design, affordable web design">
+    <meta name="author" content="Brad Traversy">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">Acme</span> Web Design</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="container">
+            <h1>Affordable Professional Web Design</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+    </section>
+    <section id="newsletter">
+        <div class="container">
+            <h1>Subscribe To Our Newsletter</h1>
+            <form>
+                <input type="email" name="email" placeholder="Enter email...">
+                <button type="submit" class="button_1">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    <section id="boxes">
+        <script type="text/javascript">
+        var a = JSON.parse(`
+{
+   "title":"Automatic End Milling Machine for PVC and Aluminium Profiles ( Rapid Blade Changing )",
+   "imageUrl":"http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/AMM-01-300.jpg",
+   "decription":[
+      {
+         "detail":"For end milling of transom in PVC and Aluminum profiles."
+      },
+      {
+         "detail":"Ability to route at varying angles up to 30° ."
+      },
+      {
+         "detail":"Positioning of the tools with pneumatic feed cylinder"
+      },
+      {
+         "detail":"Without changing the cutter set, two different series of transom profiles can be processed."
+      },
+      {
+         "detail":"Vertical pneumatic profile clamping system enables optimum work piece fixing."
+      },
+      {
+         "detail":"Pneumatic clamping system"
+      }
+   ],
+   "technicalDetails":[
+      {
+         "key":"Voltage",
+         "value":"380 V"
+      },
+      {
+         "key":"Frequency",
+         "value":"50 Hz"
+      },
+      {
+         "key":"Total power",
+         "value":"1,1 Kw"
+      },
+      {
+         "key":"Air pressure",
+         "value":"6 – 8 bar"
+      },
+      {
+         "key":"Air consumption",
+         "value":"3 lt./min"
+      },
+      {
+         "key":"Width – Length – Height",
+         "value":"670 – 610 – 1090"
+      },
+      {
+         "key":"Machine weight",
+         "value":"105 kg"
+      }
+   ]
+}`);
+
+
+        function getHeader() {
+
+            // div container
+            var containerDiv = document.createElement("DIV");
+            containerDiv.setAttribute("class", "container");
+
+            // Header
+            var h = document.createElement("H3");
+            var hText = document.createTextNode(a.title);
+            h.appendChild(hText);
+            containerDiv.appendChild(h);
+
+            // div img
+            var imgDiv = document.createElement("DIV");
+            imgDiv.setAttribute("class", "img");
+
+            // Image
+            var img = document.createElement("IMG");
+            img.setAttribute("src", a.imageUrl);
+            imgDiv.appendChild(img);
+            containerDiv.appendChild(imgDiv);
+
+            // div all-tabs
+            var divAllTabs = document.createElement("DIV");
+            divAllTabs.setAttribute("class", "all-tabs");
+
+            // div all-tabs ul
+            var ul = document.createElement("UL");
+            ul.setAttribute("class", "tabs");
+
+            // Tab Описание
+            var li1 = document.createElement("LI");
+            var a1 = document.createElement("A");
+            var a1Text = document.createTextNode("Описание");
+            a1.setAttribute("href", "javascript:activateTab('page1')");
+            a1.appendChild(a1Text);
+            li1.appendChild(a1);
+
+            // Tab Технически параметри
+            var li2 = document.createElement("LI");
+            var a2 = document.createElement("A");
+            var a2Text = document.createTextNode("Технически параметри");
+            a2.setAttribute("href", "javascript:activateTab('page2')");
+            a2.appendChild(a2Text);
+            li2.appendChild(a2);
+
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            divAllTabs.appendChild(ul);
+
+            // div float-fix
+            var divClear = document.createElement("DIV");
+            divClear.setAttribute("style", "clear:left");
+            divAllTabs.appendChild(divClear);
+
+            // div tabCtrl
+            var divTabCtrl = document.createElement("DIV");
+            divTabCtrl.setAttribute("class", "tabCtrl");
+            divAllTabs.appendChild(divTabCtrl);
+
+            // div tab1
+            var divTab1 = document.createElement("DIV");
+            divTab1.setAttribute("style", "display:block");
+            divTab1.setAttribute("id", "page1");
+            divTabCtrl.appendChild(divTab1);
+
+            // div tab1 ul element
+            var ulTab1 = document.createElement("UL");
+            divTabCtrl.appendChild(ulTab1);
+
+            // li elements
+            for (var i = 0; i < a.decription.length; i++) {
+                var li = document.createElement("LI");
+                var liText = document.createTextNode(a.decription[i].detail);
+                li.appendChild(liText);
+                ulTab1.appendChild(li);
+            }
+
+            // div tab2
+            var divTab2 = document.createElement("DIV");
+            divTab2.setAttribute("style", "display:none");
+            divTab2.setAttribute("id", "page2");
+            divTabCtrl.appendChild(divTab2);
+
+            var table = document.createElement("TABLE");
+            divTab2.appendChild(table);
+
+            for (var x = 0; x < a.technicalDetails.length; x++) {
+                var tr = document.createElement("TR");
+                table.appendChild(tr);
+                var td1 = document.createElement("TD");
+                var td1Text = document.createTextNode(a.technicalDetails[x].key);
+                td1.appendChild(td1Text);
+                var td2 = document.createElement("TD");
+                var td2Text = document.createTextNode(a.technicalDetails[x].value);
+                td2.appendChild(td2Text);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                table.appendChild(tr);
+            }
+
+
+
+
+
+
+
+
+
+            containerDiv.appendChild(divAllTabs);
+
+            /*			// ul element
+            			var ul = document.createElement("UL");
+            		    ul.setAttribute("id", "myUL");
+            		    document.body.appendChild(ul);
+
+            			// li elements
+            			for (var i = 0; i < a.decription.length; i++) {
+            				var li = document.createElement("LI");
+            				var liText = document.createTextNode(a.decription[i].detail);
+            				li.appendChild(liText);
+            				document.body.appendChild(li);
+            			}
+            */
+            document.body.appendChild(containerDiv);
+
+        }
+
+        getHeader();
+
+
+
+        function activateTab(pageId) {
+            var tabCtrl = document.getElementsByClassName('tabCtrl')[0];
+            var pageToActivate = document.getElementById(pageId);
+            for (var i = 0; i < tabCtrl.childNodes.length; i++) {
+                var node = tabCtrl.childNodes[i];
+                if (node.nodeType == 1) { /* Element */
+                    node.style.display = (node == pageToActivate) ? 'block' : 'none';
+                }
+            }
+        }
+        </script>
+    </section>
+    <footer>
+        <p>Acme Web Design Copyright &copy; 2018</p>
+    </footer>
+</body>
+
+</html>

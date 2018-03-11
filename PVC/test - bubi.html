@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Acme Web Design | Welcome</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Affordable and professional web design">
+	<meta name="keywords" content="web design, affordable web design">
+	<meta name="author" content="Brad Traversy">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1>
+					<span class="highlight">Acme</span> Web Design</h1>
+			</div>
+			<nav>
+				<ul>
+					<li class="current">
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="about.html">About</a>
+					</li>
+					<li>
+						<a href="services.html">Services</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section id="showcase">
+		<div class="container">
+			<h1>Affordable Professional Web Design</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+				irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+	</section>
+	<section id="boxes">
+
+		<script type="text/javascript">
+			var idCount = 0;
+			var a = JSON.parse(`{"machines":[{"title":"Automatic End Milling Machine for PVC and Aluminium Profiles ( Rapid Blade Changing )","imageUrl":"http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/AMM-01-300.jpg","decription":[{"detail":"For end milling of transom in PVC and Aluminum profiles."},{"detail":"Ability to route at varying angles up to 30° ."},{"detail":"Positioning of the tools with pneumatic feed cylinder"},{"detail":"Without changing the cutter set, two different series of transom profiles can be processed."},{"detail":"Vertical pneumatic profile clamping system enables optimum work piece fixing."},{"detail":"Pneumatic clamping system"}],"technicalDetails":[{"key":"Voltage","value":"380 V"},{"key":"Frequency","value":"50 Hz"},{"key":"Total power","value":"1,1 Kw"},{"key":"Air pressure","value":"6 – 8 bar"},{"key":"Air consumption","value":"3 lt./min"},{"key":"Width – Length – Height","value":"670 – 610 – 1090"},{"key":"Machine weight","value":"105 kg"}]},{"title":"Single head mitre saw machine for PVC and Aluminium Profiles","imageUrl":"http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/MOS-01-300.jpg","decription":[{"detail":"PVC and Aluminum profiles cutting."},{"detail":"Allows to cut by the fixing both sides in 15°- 20°- 25°- 30°- 35°- 40°- 45°"},{"detail":"Adjustable Saw Blade speed."},{"detail":"Pneumatic profile clamping system."},{"detail":"Conveyor systems for Right / Left side"},{"detail":"Allows for easy rotation because of to run on the ball in the center."},{"detail":"Diameter of the saw blade is 420 mm"},{"detail":"Cooling system for aluminum profiles cutting. (OPTIONAL)"}],"technicalDetails":[{"key":"Voltage","value":"380 V"},{"key":"Frequency","value":"50- 60 Hz"},{"key":"Total power","value":"1,5 Kw"},{"key":"Air pressure","value":"6 – 8 bar"},{"key":"Air consumption","value":"10.3 lt / min"},{"key":"Saw Blade diameter","value":"420 mm 3500 Turnover/ min"},{"key":"Width – Length – Height","value":"850 – 670 – 1250"},{"key":"Machine weight","value":"210 kg"}]},{"title":"Full automatic single head mitre saw machine for PVC and Aluminium Profiles (with turntable)","imageUrl":"http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/AOS-01-300.jpg","decription":[{"detail":"PVC and Aluminum profiles cutting."},{"detail":"Automatic cutting between 45° – 90° – 130°"},{"detail":"Manuel cutting between 15°- 20°- 25°- 30°- 35°- 40°"},{"detail":"Adjustable Saw Blade speed."},{"detail":"Pneumatic profile clamping system."},{"detail":"Auto cutting system for +45° and -45°"},{"detail":"Conveyor systems for Right / Left side"},{"detail":"Manuel working, allows for easy rotation because of to run on the ball in the center."},{"detail":"Diameter of the saw blade is 420 mm"},{"detail":"Cooling system for aluminum profiles cutting. (optional)"}],"technicalDetails":[{"key":"Voltage","value":"380 V"},{"key":"Frequency","value":"50 Hz"},{"key":"Total power","value":"1,5 Kw"},{"key":"Air pressure","value":"6 – 8 bar"},{"key":"Air consumption","value":"4 lt / min"},{"key":"Saw Blade diameter","value":"420 mm 3500 Turnover/ min"},{"key":"Width – Length – Height","value":"850 – 670 – 1250"},{"key":"Machine weight","value":"210 kg"}]}]}`);
+
+			function renderTechDetails(techDetails) {
+				return `${techDetails.map(techDetail => `<li>${techDetail.detail}</li>`).join("")}`;
+			}
+
+			function renderTechParams(techParams) {
+				return `${techParams.map(techParam => `
+					<tr>
+						<td>${techParam.key}</td>
+						<td>${techParam.value}</td>
+					</tr>
+					`).join("")}`;
+			}
+
+			for (var k = 0; k < a.machines.length; k++) {
+				const detailsTabId = "tab" + generateId();
+				const paramsTabId = "tab" + generateId();
+				const markup = `				
+					<div class="container">
+						<h2>${a.machines[k].title}</h2>
+						<div class="img">
+							<img src="${a.machines[k].imageUrl}"/>
+						</div>
+						<div class="all-tabs">
+							<ul class="tabs">	
+								<li>
+									<a href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Описание</a>
+								</li>
+								<li>
+									<a href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">Технически параметри</a>
+								</li>	
+							</ul>
+							<div style="clear:left"></div>
+							<div class="tabCtrl">
+								<div id="${detailsTabId}" style="display: block;">
+									<ul>
+										${renderTechDetails(a.machines[k].decription)}
+									</ul>
+								</div>
+								<div id="${paramsTabId}" style="display: none;">
+									<table>
+										${renderTechParams(a.machines[k].technicalDetails)}
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				`;
+				document.body.innerHTML += markup;
+			}
+
+			function generateId() {
+				return idCount++;
+			}
+			
+			function showTab(tabId) {
+				var tab = document.getElementById(tabId);
+				tab.style.display = "block";
+			}
+
+			function hideTab(tabId) {
+				var tab = document.getElementById(tabId);
+				tab.style.display = "none";
+			}
+
+		</script>
+	</section>
+
+	<footer>
+		<p>Acme Web Design Copyright &copy; 2018</p>
+	</footer>
+</body>
+
+</html>
