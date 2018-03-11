@@ -90,6 +90,7 @@ header a:hover{
 #showcase{
 	min-height: 400px;
 	background:url(http://www.pvc-mashini.com/wp-content/uploads/2014/09/Windows_One.jpg) no-repeat center;
+	background-size: cover;
 	color:white;
 	text-align: center;
 }
@@ -241,6 +242,9 @@ footer{
 }
 
 
+li{
+	list-style-type:square;
+}
 
 
 
