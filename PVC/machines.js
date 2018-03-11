@@ -36,7 +36,7 @@ function renderTechParams(techParams){
 function renderHeader()
 {
 	const headerMarkup = `
-		<header>
+		<header id="top-menu">
 			<div class="container">
 				<div id="branding">
 					<h1><span class="highlight">Acme</span> Web Design</h1>
