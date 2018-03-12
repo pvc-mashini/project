@@ -42,7 +42,7 @@ function renderHeader() {
 					<h1><span class="highlight">Acme</span> Web Design</h1>
 				</div>
 				<nav>
-					<select id="${langSelectorId}" class="form-control" data-width="fit" onchange="location = this.value">
+					<select id="${langSelectorId}" data-width="fit" onchange="location = this.value">
 						<option value="index.html">English</option>
 						<option value="bg.html">Български</option>
 						<option value="srb.html">Srpski</option>
@@ -159,14 +159,14 @@ function renderFooter() {
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-3">
-				<h4>Head office: Turkey, Bursa</h4>
-				email: info.pvc.mashini@gmail.com<br>
+				<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Head office: Turkey, Bursa</h4>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i> info.pvc.mashini@gmail.com<br>
 				<i class="fa fa-skype" aria-hidden="true"></i> mumhum1<br>
 				<i class="fa fa-phone" aria-hidden="true"></i> +90 534 391 74 16<br><br>
 			</div>
 			<div class="col-md-3">
-				<h4>Bulgaria, Kardzhali</h4>
-				email: pvc.mashini.bulgaria@gmail.com<br>
+				<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Bulgaria, Kardzhali</h4>
+				<i class="fa fa-envelope-o" aria-hidden="true"></i> pvc.mashini.bulgaria@gmail.com<br>
 				<i class="fa fa-whatsapp" aria-hidden="true"></i> +359 882 79 25 14<br>
 				<i class="fa fa-phone" aria-hidden="true"></i> +359 878 37 19 22<br><br>
 			</div>
