@@ -12,7 +12,6 @@ function generateHTML(lang) {
 	renderMachinesSection();
 	renderScrollToTopButton();
 	renderFooter();
-	setSelectedLanguage(lang);
 }
 
 function renderScrollToTopButton() {
@@ -36,7 +35,7 @@ function renderTechParams(techParams) {
 function renderHeader() {
 	const headerMarkup = `
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
 						<span class="icon-bar"></span>
@@ -111,19 +110,17 @@ function renderMachinesSection() {
 		const paramsTabId = "tab" + generateTabId();
 
 		const markup = `							
-		<div class="container">
+		<div class="container surround">
 			<div class="row">
 				<div class="row">
-					<div class="col-xs-12" id="machineName">
+					<div class="col-xs-12 machineName">
 						<h3>${bbbbbbbbb.machines[k].title}</h3>
 					</div>
 				</div>
-				<div class="col-xs-4">
-					<div class="img">
-					<img src="${bbbbbbbbb.machines[k].imageUrl}"/>
+				<div class="col-sm-4 col-xs-12">
+					<img class="machineImage" src="${bbbbbbbbb.machines[k].imageUrl}"/>
 				</div>
-				</div>
-				<div class="col-xs-8">
+				<div class="col-sm-8 col-xs-12">
 					<ul class="nav nav-tabs">	
 						<li role="presentation" class="active">
 							<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Oписание</a>
@@ -145,34 +142,36 @@ function renderMachinesSection() {
 						</div>
 					</div>
 				</div>
-			<div>
+			</div>
 		</div>				
 		`;
 		allMachines += markup;
 	}
-	document.body.innerHTML += "<section id='boxes'>" + allMachines + "</section>";
+	document.body.innerHTML += allMachines;
 }
 
 function renderFooter() {
 	const footerMarkup = `
 		<footer id="footer">
-		<h3>Contact Us</h3>
-		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-3">
-				<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Head office: Turkey, Bursa</h4>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> info.pvc.mashini@gmail.com<br>
-				<i class="fa fa-skype" aria-hidden="true"></i> mumhum1<br>
-				<i class="fa fa-phone" aria-hidden="true"></i> +90 534 391 74 16<br><br>
-			</div>
-			<div class="col-md-3">
-				<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Bulgaria, Kardzhali</h4>
-				<i class="fa fa-envelope-o" aria-hidden="true"></i> pvc.mashini.bulgaria@gmail.com<br>
-				<i class="fa fa-whatsapp" aria-hidden="true"></i> +359 882 79 25 14<br>
-				<i class="fa fa-phone" aria-hidden="true"></i> +359 878 37 19 22<br><br>
-			</div>
-			<div class="col-md-3"></div>
-	    </div>
+			<div class="container">
+				<h3>Contact Us</h3>
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-3">
+						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Head office: Turkey, Bursa</h4>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i> info.pvc.mashini@gmail.com<br>
+						<i class="fa fa-skype" aria-hidden="true"></i> mumhum1<br>
+						<i class="fa fa-phone" aria-hidden="true"></i> +90 534 391 74 16<br><br>
+					</div>
+					<div class="col-md-3">
+						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Bulgaria, Kardzhali</h4>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i> pvc.mashini.bulgaria@gmail.com<br>
+						<i class="fa fa-whatsapp" aria-hidden="true"></i> +359 882 79 25 14<br>
+						<i class="fa fa-phone" aria-hidden="true"></i> +359 878 37 19 22<br><br>
+					</div>
+					<div class="col-md-3"></div>
+			    </div>
+			</div> <!-- Close container-->
 			<hr>
 			<h6>Acme Web Design Copyright &copy; 2018</h6>
 		</footer>

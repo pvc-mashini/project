@@ -1,9 +1,15 @@
+ .surround{
+    margin-bottom: 20px;
+    border-bottom:1px solid #ccc;
+    padding-bottom: 10px;
+}
+
 body{
     padding-top:80px;
     font-family:"Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Header naviagtion */
+/* Header navigation */
 .navbar {
     margin-bottom:0;
     border-radius:0;
@@ -69,22 +75,15 @@ body{
 }
 
 /* Single machine item*/
-#machineName {
+.machineName {
     margin-bottom:20px;
 }
 
-.img{
-    border:1px solid #ddd;
+.machineImage{
     border-radius: 5px;
     width:300px;
     height:300px;
     box-sizing: border-box;
-}
-
-.img img{
-    width:298px;
-    height:298px;
-    border-radius: 5px;
 }
 
 .nav-tabs{
@@ -148,4 +147,63 @@ footer h3,h6{
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+    body{
+        padding-top:40px;
+    }
+
+    .navbar .navbar-brand {
+        font-size:1.3em;
+    }
+
+    .dropdown-menu li a{
+        float:right;
+    }
+
+    .machineName{
+        padding:0 15px;
+        margin-bottom:5px;
+    }
+
+    .machineName h3{
+        font-size:1.4em;
+    }
+
+    #showcase h1{
+        margin-top: 40px;
+    }
+
+    .img{
+        width:250px;
+        height:250px;
+        margin:auto;
+        margin-bottom:30px;
+        border:none;
+    }
+
+    .img img{
+        width:248px;
+        height:248px;
+    }
+
+    #catalog h1{
+        font-size:1.9em;
+    }
+
+    .container{
+        min-width:360px;
+        max-width: 95%;
+    }
+
+    .nav-tabs li a{
+        font-size:1em;
+    }
+
+    table{
+        width:auto;
+    }
+
 }
