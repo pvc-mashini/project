@@ -3,13 +3,12 @@ var a = JSON.parse(`{
 }`);
 var idCount = 1;
 var curLang = "";
-const langSelectorId = "lang-selector";
 
 function generateHTML(lang) {
-	curLang = lang;
+	curLang = lang.toUpperCase();
 	renderHeader();
 	renderShowcaseSection();
-	renderSubscribeSection();
+	renderCatalogSection();
 	renderMachinesSection();
 	renderScrollToTopButton();
 	renderFooter();
@@ -27,59 +26,55 @@ function renderTechDetails(techDetails) {
 
 function renderTechParams(techParams) {
 	return `${techParams.map(techParam => `
-    <div class="row">
-		<div class="col-md-4">${techParam.key}</div>
-    	<div class="col-md-8">${techParam.value}</div>
-    </div>
+    	<tr>
+			<td>${techParam.key}</td>
+	    	<td>${techParam.value}<td>
+	    </tr>
 		`).join("")}`;
 }
 
 function renderHeader() {
 	const headerMarkup = `
-		<header id="top-menu">
-			<div class="container">
-				<div id="branding">
-					<h1><span class="highlight">Acme</span> Web Design</h1>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+						<span class="icon-bar"></span>
+				    	<span class="icon-bar"></span>
+				    	<span class="icon-bar"></span>
+					</button>	
+					<a class="navbar-brand" href="#">Acme Web Design</a>		    		
 				</div>
-				<nav>
-					<select id="${langSelectorId}" data-width="fit" onchange="location = this.value">
-						<option value="index.html">English</option>
-						<option value="bg.html">Български</option>
-						<option value="srb.html">Srpski</option>
-						<option value="tr.html">Türk</option>
-						<option value="ru.html">Русский</option>
-						<option value="mk.html">Македонски</option>
-						<option value="arb.html">العربية</option>
-					</select>
-				</nav>
-        <nav>
-           <ul id="menu">
-            <li><a href="#newsletter">PRODUCTS</a></li>
-            <li><a href="#footer">CONTACTS</a></li>
-           </ul>
-        </nav>
-			</div>
-		</header>
+				<div class="collapse navbar-collapse" id="MyNavbar">	
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#catalog">Products</a></li>
+						<li><a href="#footer">Contacts</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
+							aria-haspopup="true" aria-expanded="false">${curLang} <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="index.html">EN</a></li>
+								<li><a href="bg.html">BG</a></li>
+								<li><a href="tr.html">TR</a></li>
+								<li><a href="ru.html">RU</a></li>
+								<li><a href="srb.html">SRB</a></li>
+								<li><a href="mk.html">MK</a></li>
+								<li><a href="arb.html">ARB</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
 	`;
 
 	document.body.innerHTML += headerMarkup;
 }
 
-function setSelectedLanguage(lang) {
-	let select = document.getElementById(langSelectorId);
-	
-	let page = lang;
-	if (page.toLowerCase() === "en") {
-		page = "index";
-	}
-	select.value = page + ".html";
-}
-
-function renderSubscribeSection() {
+function renderCatalogSection() {
 	const subscribMarkup = `
-		<section id="newsletter">
+		<section id="catalog">
 			<div class="container">
-				<h1>Products Catalog</h1>
+				<h1 class="text-center">Products Catalog</h1>
 			</div>
 		</section>
 	`;
@@ -116,36 +111,42 @@ function renderMachinesSection() {
 		const paramsTabId = "tab" + generateTabId();
 
 		const markup = `							
-			<div class="container">			    	
-						<h4>${bbbbbbbbb.machines[k].title}</h4>
-							<div class="img">
-								<img src="${bbbbbbbbb.machines[k].imageUrl}"/>
-							</div>
-							<div class="all-tabs">
-								<ul class="nav nav-tabs">	
-									<li role="presentation" class="active">
-										<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Oписание</a>
-									</li>
-									<li role="presentation">
-										<a data-toggle="tab" href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">Технически параметри</a>
-									</li>	
-								</ul>
-								<div style="clear:left"></div>
-								<div class="tabCtrl">
-									<div id="${detailsTabId}" style="display: block;">
-										<ul>
-											${renderTechDetails(bbbbbbbbb.machines[k].decription)}
-										</ul>
-									</div>
-									<div id="${paramsTabId}" style="display: none;">
-										
-											${renderTechParams(bbbbbbbbb.machines[k].technicalDetails)}
-										
-									</div>
-								</div>
-							</div>
+		<div class="container">
+			<div class="row">
+				<div class="row">
+					<div class="col-xs-12" id="machineName">
+						<h3>${bbbbbbbbb.machines[k].title}</h3>
+					</div>
+				</div>
+				<div class="col-xs-4">
+					<div class="img">
+					<img src="${bbbbbbbbb.machines[k].imageUrl}"/>
+				</div>
+				</div>
+				<div class="col-xs-8">
+					<ul class="nav nav-tabs">	
+						<li role="presentation" class="active">
+							<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Oписание</a>
+						</li>
+						<li role="presentation">
+							<a data-toggle="tab" href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">Технически параметри</a>
+						</li>	
+					</ul>
+					<div>
+						<div id="${detailsTabId}" style="display: block;">
+							<ul>
+								${renderTechDetails(bbbbbbbbb.machines[k].decription)}
+							</ul>
 						</div>
-			</div>				
+						<div id="${paramsTabId}" style="display: none;">
+							<table>
+								${renderTechParams(bbbbbbbbb.machines[k].technicalDetails)}
+							</table>
+						</div>
+					</div>
+				</div>
+			<div>
+		</div>				
 		`;
 		allMachines += markup;
 	}
@@ -172,7 +173,7 @@ function renderFooter() {
 			</div>
 			<div class="col-md-3"></div>
 	    </div>
-		
+			<hr>
 			<h6>Acme Web Design Copyright &copy; 2018</h6>
 		</footer>
 	`;
@@ -193,9 +194,6 @@ function hideTab(tabId) {
 function generateTabId() {
 	return idCount++;
 }
-
-
-
 
 window.onscroll = function () { scrollFunction() };
 
