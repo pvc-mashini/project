@@ -34,6 +34,20 @@ function renderTechParams(techParams) {
 		`).join("")}`;
 }
 
+function renderTechParamsTable(techParams) {
+	let table = `<table class="table table-condensed">
+		<tbody>`;
+		table += `${techParams.map(techParam => `
+	<tr>
+		<td>${techParam.key}</td>
+		<td>${techParam.value}</td>
+	</tr>
+		`).join("")}`;
+		table+=`    </tbody>
+		</table>`;
+		return table;
+}
+
 function renderHeader() {
 	const headerMarkup = `
 		<header id="top-menu">
@@ -109,19 +123,19 @@ function getMachinesInfoForLang(lang) {
 }
 
 function renderMachinesSection() {
-	var allMachines = "";
+	var allMachines = '<div class="container">\n';
 	var bbbbbbbbb = getMachinesInfoForLang(curLang);
 	for (var k = 0; k < bbbbbbbbb.machines.length; k++) {
 		const detailsTabId = "tab" + generateTabId();
 		const paramsTabId = "tab" + generateTabId();
 
 		const markup = `							
-			<div class="container">			    	
+			<div class="row">			    	
 						<h4>${bbbbbbbbb.machines[k].title}</h4>
-							<div class="img">
-								<img src="${bbbbbbbbb.machines[k].imageUrl}"/>
+							<div class="col-xs-12 col-sm-5">
+								<img class="img" src="${bbbbbbbbb.machines[k].imageUrl}"/>
 							</div>
-							<div class="all-tabs">
+							<div class="col-xs-12 col-sm-7 all-tabs">
 								<ul class="nav nav-tabs">	
 									<li role="presentation" class="active">
 										<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Oписание</a>
@@ -130,7 +144,6 @@ function renderMachinesSection() {
 										<a data-toggle="tab" href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">Технически параметри</a>
 									</li>	
 								</ul>
-								<div style="clear:left"></div>
 								<div class="tabCtrl">
 									<div id="${detailsTabId}" style="display: block;">
 										<ul>
@@ -139,16 +152,16 @@ function renderMachinesSection() {
 									</div>
 									<div id="${paramsTabId}" style="display: none;">
 										
-											${renderTechParams(bbbbbbbbb.machines[k].technicalDetails)}
+											${renderTechParamsTable(bbbbbbbbb.machines[k].technicalDetails)}
 										
 									</div>
 								</div>
 							</div>
 						</div>
-			</div>				
 		`;
 		allMachines += markup;
 	}
+	allMachines += '</div>'
 	document.body.innerHTML += "<section id='boxes'>" + allMachines + "</section>";
 }
 

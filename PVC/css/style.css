@@ -14,7 +14,7 @@ body{
 
 /* Global */
 .container{
-	width: 80%;
+	max-width: 900px;
 	margin: auto;
 	overflow: hidden;
 }
@@ -150,20 +150,11 @@ h4 {
 
 /* Footer */
 
-footer{
-	padding:10px;
-	color:white;
-	background:#e8491d;
-	margin-top: 20px;
-}
 
-footer h3,h6{
-	text-align: center;
-}
 
-		.row{
+		/* .row{
 			border-bottom: 1px solid #ddd;
-		}
+		} */
 
 		.img{
 			float:left;
@@ -220,6 +211,10 @@ footer h3,h6{
 			border-top:none;	
 		}
 
+		.table, td, tr{
+			border:none;
+		}
+
 
 
 /* Scrool to top button*/
@@ -268,6 +263,7 @@ li{
 #lang-selector select:hover{
 	background-color:yellow;
 }
+
 
 /* Media Queries */
 @media(max-width: 768px){
