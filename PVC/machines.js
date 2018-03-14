@@ -26,7 +26,7 @@ function renderTechDetails(techDetails) {
 function renderTechParams(techParams) {
 	return `${techParams.map(techParam => `
     	<tr>
-			<td>${techParam.key}</td>
+			<td>${(techParam.key).toLowerCase()}</td>
 	    	<td>${techParam.value}<td>
 	    </tr>
 		`).join("")}`;
