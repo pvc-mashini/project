@@ -34,10 +34,11 @@ function renderTechParams(techParams) {
 
 function renderHeader() {
 	const headerMarkup = `
-		<nav class="navbar navbar-inverse navbar-fixed-top">
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
 				    	<span class="icon-bar"></span>
 				    	<span class="icon-bar"></span>
@@ -46,18 +47,18 @@ function renderHeader() {
 				</div>
 				<div class="collapse navbar-collapse" id="MyNavbar">	
 					<ul class="nav navbar-nav navbar-right">
-						<li class="active"><a href="#catalog">Products</a></li>
+						<li><a href="#catalog">Products</a></li>
 						<li><a href="#footer">Contacts</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
 							aria-haspopup="true" aria-expanded="false"><img src="images/flags/${curLang}.png"> ${curLang} <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="index.html"><img src="images/flags/en.png"> EN</a></li>
-								<li><a href="bg.html"><img src="images/flags/bg.png"> BG</a></li>
-								<li><a href="tr.html"><img src="images/flags/tr.png"> TR</a></li>
-								<li><a href="ru.html"><img src="images/flags/ru.png"> RU</a></li>
-								<li><a href="sr.html"><img src="images/flags/sr.png"> SR</a></li>
-								<li><a href="mk.html"><img src="images/flags/mk.png"> MK</a></li>
-								<li><a href="ar.html"><img src="images/flags/ar.png"> AR</a></li>
+								<li><a href="index.html"><img src="images/flags/en.png"> English</a></li>
+								<li><a href="bg.html"><img src="images/flags/bg.png"> Български</a></li>
+								<li><a href="tr.html"><img src="images/flags/tr.png"> Türkçe</a></li>
+								<li><a href="ru.html"><img src="images/flags/ru.png"> Руский</a></li>
+								<li><a href="sr.html"><img src="images/flags/sr.png"> Српски</a></li>
+								<li><a href="mk.html"><img src="images/flags/mk.png"> Македонски </a></li>
+								<li><a href="ar.html"><img src="images/flags/ar.png"> عربي</a></li>
 							</ul>
 						</li>
 					</ul>
