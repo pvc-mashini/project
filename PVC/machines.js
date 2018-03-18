@@ -50,7 +50,7 @@ function renderHeader() {
 						<li><a href="#catalog">Products</a></li>
 						<li><a href="#footer">Contacts</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
-							aria-haspopup="true" aria-expanded="false"><img src="images/flags/${curLang}.png"> ${curLang} <span class="caret"></span></a>
+							aria-haspopup="true" aria-expanded="false"><img src="images/flags/${curLang.toLocaleLowerCase()}.png"> ${curLang} <span class="caret"></span></a>
 							<ul class="dropdown-menu">
 								<li><a href="index.html"><img src="images/flags/en.png"> English</a></li>
 								<li><a href="bg.html"><img src="images/flags/bg.png"> Български</a></li>
