@@ -43,7 +43,7 @@ function renderHeader() {
 					<a class="navbar-brand" href="#">Acme Web Design</a>		    		
 				</div>
 				<div class="collapse navbar-collapse" id="MyNavbar">	
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right pull-right">
 						<li><a href="#catalog">Products</a></li>
 						<li><a href="#footer">Contacts</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 

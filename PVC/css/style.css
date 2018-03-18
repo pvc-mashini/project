@@ -201,4 +201,11 @@ footer h3,h6{
         padding:2px 10px;
     }
 
+    .dropdown-menu, .navbar-nav{
+        width: 150px;
+    }
+
+    .navbar ul li a {
+        width: 100%;
+    }
 }
