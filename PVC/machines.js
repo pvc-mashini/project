@@ -40,7 +40,7 @@ function renderHeader() {
 				    	<span class="icon-bar"></span>
 				    	<span class="icon-bar"></span>
 					</button>	
-					<a class="navbar-brand" href="#"><img id="logo" src="images/logo.svg"></a>
+					<a class="navbar-brand" href="#"><img id="logo" src="images/logo_big.svg"></a>
 				</div>
 				<div class="collapse navbar-collapse" id="MyNavbar">	
 					<ul class="nav navbar-nav navbar-right pull-right">
@@ -171,7 +171,7 @@ function renderFooter() {
 			    </div>
 			</div> <!-- Close container-->
 			<hr>
-			<h6>Acme Web Design Copyright &copy; 2018</h6>
+			<h6>Hyumet Machinery Copyright &copy; 2018</h6>
 		</footer>
 	`;
 
