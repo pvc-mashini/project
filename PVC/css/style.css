@@ -62,7 +62,7 @@ body{
 
 /* Single machine item*/
 .machineName {
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .machineImage{
@@ -73,11 +73,11 @@ body{
 }
 
 .nav-tabs{
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 .nav-tabs li a{
-    font-size:1.2em;
+    font-size:1em;
     color:#5d5d5d;
 }
 
