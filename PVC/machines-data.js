@@ -768,8 +768,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "BG",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "Технически параметри",
+      "descriptionTabName": "Описание",
       "machines": [
         {
           "title": "Челна фреза за фрезоване на ПВЦ и АL профили (с бързо сменящи се серийни ножове)",
@@ -1640,8 +1640,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "TR",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "Teknik detaylar",
+      "descriptionTabName": "Özellikler",
       "machines": [
         {
           "title": "Kompresör 500 Lt",
@@ -2388,8 +2388,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "RU",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "Характеристики",
+      "descriptionTabName": "Описание",
       "machines": [
         {
           "title": "Автоматический станок для фрезования торцов импостного ПВХ и АL профилей (система быстрой замены фрезы)",
@@ -3159,8 +3159,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "SR",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "Tehnički detalji",
+      "descriptionTabName": "Opis",
       "machines": [
         {
           "title": "Ceona freza za obradu T prečke",
@@ -3751,8 +3751,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "MK",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "Технички детали",
+      "descriptionTabName": "Опис",
       "machines": [
         {
           "title": "Celna freza T – precka",
@@ -4337,8 +4337,8 @@ const machinesData = JSON.parse(`{
     },
     {
       "language": "AR",
-      "detailsTabName": "Technical Details",
-      "descriptionTabName": "Description",
+      "detailsTabName": "تفاصيل تقنية",
+      "descriptionTabName": "وصف",
       "machines": [
         {
           "title": "ماكينة التفريز الطرفي الأتوماتيكية لإطار PVC",

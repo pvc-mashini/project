@@ -121,10 +121,12 @@ function renderMachinesSection() {
 				<div class="col-sm-8 col-xs-12">
 					<ul class="nav nav-tabs">	
 						<li role="presentation" class="active">
-							<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">Oписание</a>
+							<a data-toggle="tab" href="#" onclick="showTab('${detailsTabId}');hideTab('${paramsTabId}');return false;">
+							${bbbbbbbbb.descriptionTabName}</a>
 						</li>
 						<li role="presentation">
-							<a data-toggle="tab" href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">Технически параметри</a>
+							<a data-toggle="tab" href="#" onclick="showTab('${paramsTabId}');hideTab('${detailsTabId}');return false;">
+							${bbbbbbbbb.detailsTabName}</a>
 						</li>	
 					</ul>
 					<div>
