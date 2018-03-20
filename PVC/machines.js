@@ -1,8 +1,10 @@
 var idCount = 1;
 var curLang = "";
+var bbbbbbbbb;
 
 function generateHTML(lang) {
 	curLang = lang.toUpperCase();
+	bbbbbbbbb = getMachinesInfoForLang(curLang);
 	renderHeader();
 	renderShowcaseSection();
 	renderCatalogSection();
@@ -12,7 +14,7 @@ function generateHTML(lang) {
 }
 
 function renderScrollToTopButton() {
-	const button = `<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>`;
+	const button = `<button onclick="topFunction()" id="myBtn"><span class="glyphicon glyphicon-chevron-up"></button>`;
 	document.body.innerHTML += button;
 }
 
@@ -44,8 +46,8 @@ function renderHeader() {
 				</div>
 				<div class="collapse navbar-collapse" id="MyNavbar">	
 					<ul class="nav navbar-nav navbar-right pull-right">
-						<li><a href="#catalog">Products</a></li>
-						<li><a href="#footer">Contacts</a></li>
+						<li><a href="#catalog">${bbbbbbbbb.productsMenu}</a></li>
+						<li><a href="#footer">${bbbbbbbbb.contactsMenu}</a></li>
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
 							aria-haspopup="true" aria-expanded="false"><img src="images/flags/${curLang.toLocaleLowerCase()}.png"> ${curLang} <span class="caret"></span></a>
 							<ul class="dropdown-menu">
@@ -71,7 +73,7 @@ function renderCatalogSection() {
 	const subscribMarkup = `
 		<section id="catalog">
 			<div class="container">
-				<h1 class="text-center">Products Catalog</h1>
+				<h1 class="text-center">${bbbbbbbbb.productsMenu}</h1>
 			</div>
 		</section>
 	`;
@@ -101,7 +103,6 @@ function getMachinesInfoForLang(lang) {
 
 function renderMachinesSection() {
 	var allMachines = "";
-	var bbbbbbbbb = getMachinesInfoForLang(curLang);
   
 	for (var k = 0; k < bbbbbbbbb.machines.length; k++) {
 		const detailsTabId = "tab" + generateTabId();
@@ -154,18 +155,18 @@ function renderFooter() {
 	const footerMarkup = `
 		<footer id="footer">
 			<div class="container">
-				<h3>Contact Us</h3>
+				<h3>${bbbbbbbbb.contactsMenu}</h3>
 				<div class="row">
 					<div class="col-md-3"></div>
 					<div class="col-md-3">
-						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Head office: Turkey, Bursa</h4>
-						<i class="fa fa-envelope-o" aria-hidden="true"></i> info.pvc.mashini@gmail.com<br>
+						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> ${bbbbbbbbb.trAddress}</h4>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i> ${bbbbbbbbb.trEmail}<br>
 						<i class="fa fa-skype" aria-hidden="true"></i> mumhum1<br>
 						<i class="fa fa-phone" aria-hidden="true"></i> +90 534 391 74 16<br><br>
 					</div>
 					<div class="col-md-3">
-						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> Bulgaria, Kardzhali</h4>
-						<i class="fa fa-envelope-o" aria-hidden="true"></i> pvc.mashini.bulgaria@gmail.com<br>
+						<h4><i class="fa fa-map-marker" aria-hidden="true"></i> ${bbbbbbbbb.bgAddress}</h4>
+						<i class="fa fa-envelope-o" aria-hidden="true"></i> ${bbbbbbbbb.bgEmail}<br>
 						<i class="fa fa-whatsapp" aria-hidden="true"></i> +359 882 79 25 14<br>
 						<i class="fa fa-phone" aria-hidden="true"></i> +359 878 37 19 22<br><br>
 					</div>

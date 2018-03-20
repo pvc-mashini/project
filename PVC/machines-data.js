@@ -4,6 +4,12 @@ const machinesData = JSON.parse(`{
       "language": "EN",
       "detailsTabName": "Technical Details",
       "descriptionTabName": "Description",
+      "productsMenu": "Products",
+      "contactsMenu": "Contacts",
+      "trAddress":"Head office: Turkey, Bursa",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Bulgaria, Kardzhali",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Automatic End Milling Machine for PVC and Aluminium Profiles ( Rapid Blade Changing )",
@@ -770,6 +776,12 @@ const machinesData = JSON.parse(`{
       "language": "BG",
       "detailsTabName": "Технически параметри",
       "descriptionTabName": "Описание",
+      "productsMenu": "Продукти",
+      "contactsMenu": "Контакти",
+      "trAddress":"Централен офис: Турция, Бурса",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"България, Кърджали",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Челна фреза за фрезоване на ПВЦ и АL профили (с бързо сменящи се серийни ножове)",
@@ -1642,6 +1654,12 @@ const machinesData = JSON.parse(`{
       "language": "TR",
       "detailsTabName": "Teknik detaylar",
       "descriptionTabName": "Özellikler",
+      "productsMenu": "Ürünler",
+      "contactsMenu": "İletişim",
+      "trAddress":"Merkez ofis: Türkiye, Bursa",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Bulgaristan, Kırcaali",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Kompresör 500 Lt",
@@ -2390,6 +2408,12 @@ const machinesData = JSON.parse(`{
       "language": "RU",
       "detailsTabName": "Характеристики",
       "descriptionTabName": "Описание",
+      "productsMenu": "Продукты",
+      "contactsMenu": "Контакты",
+      "trAddress":"Головной офис: Турция, Бурса",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Болгария, Кырджали",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Автоматический станок для фрезования торцов импостного ПВХ и АL профилей (система быстрой замены фрезы)",
@@ -3161,6 +3185,12 @@ const machinesData = JSON.parse(`{
       "language": "SR",
       "detailsTabName": "Tehnički detalji",
       "descriptionTabName": "Opis",
+      "productsMenu": "Proizvodi",
+      "contactsMenu": "Kontakti",
+      "trAddress":"Glavni ured: Turska, Bursa",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Bulgaria, Kardzhali",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Ceona freza za obradu T prečke",
@@ -3753,6 +3783,12 @@ const machinesData = JSON.parse(`{
       "language": "MK",
       "detailsTabName": "Технички детали",
       "descriptionTabName": "Опис",
+      "productsMenu": "Proizvodi",
+      "contactsMenu": "Контакти",
+      "trAddress":"Главен канцеларија: Турциja, Бурса",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Булгариja, Крџали",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "Celna freza T – precka",
@@ -4339,6 +4375,12 @@ const machinesData = JSON.parse(`{
       "language": "AR",
       "detailsTabName": "تفاصيل تقنية",
       "descriptionTabName": "وصف",
+      "productsMenu": "منتجات",
+      "contactsMenu": "جهات الاتصال",
+      "trAddress":"Head office: Turkey, Bursa",
+      "trEmail":"info.pvc.mashini@gmail.com",
+      "bgAddress":"Bulgaria, Kardzhali",
+      "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
         {
           "title": "ماكينة التفريز الطرفي الأتوماتيكية لإطار PVC",
