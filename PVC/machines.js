@@ -104,19 +104,27 @@ function getMachinesInfoForLang(lang) {
 function renderMachinesSection() {
 	var allMachines = "";
   
-	for (var k = 0; k < bbbbbbbbb.machines.length; k++) {
+	for (var k = 0; k < bbbbbbbbb.machines.length - 3; k = k + 3) {
 		const detailsTabId = "tab" + generateTabId();
 		const paramsTabId = "tab" + generateTabId();
 
 		const markup = `							
-		<div class="container surround">
-			<div class="row">
-				<div class="row">
-					<div class="col-xs-12 machineName">
-						<h4>${bbbbbbbbb.machines[k].title}</h4>
-					</div>
-				</div>
-				<div class="col-sm-4 col-xs-12">
+		<div class="container surround row">
+			<div class="col-md-4" align="center">
+				<h5 class="modal-title">${bbbbbbbbb.machines[k].title}</h5>
+				<img src="${bbbbbbbbb.machines[k].imageUrl}" style="width:150px;height:150px;"><br>
+				<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">View</button>
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">${bbbbbbbbb.machines[k].title}</h4>
+							</div>
+							<div class="modal-body row" align="left">
+								<div class="col-sm-4 col-xs-12">
 					<img class="machineImage" src="${bbbbbbbbb.machines[k].imageUrl}"/>
 				</div>
 				<div class="col-sm-8 col-xs-12">
@@ -140,6 +148,63 @@ function renderMachinesSection() {
 							<table>
 								${renderTechParams(bbbbbbbbb.machines[k].technicalDetails)}
 							</table>
+						</div>
+					</div>
+				</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-4" align="center">
+				<h5 class="modal-title">${bbbbbbbbb.machines[k + 1].title}</h5>
+				<img src="${bbbbbbbbb.machines[k + 1].imageUrl}" style="width:150px;height:150px;"><br>
+				<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">View</button>
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">${bbbbbbbbb.machines[k + 1].title}</h4>
+							</div>
+							<div class="modal-body">
+								<p>Some tssssssssssssssssxt in the modal.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="col-md-4" align="center">
+				<h5 class="modal-title">${bbbbbbbbb.machines[k + 2].title}</h5>
+				<img src="${bbbbbbbbb.machines[k + 2].imageUrl}" style="width:150px;height:150px;"><br>
+				<button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">View</button>
+				<!-- Modal -->
+				<div id="myModal" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">${bbbbbbbbb.machines[k + 2].title}</h4>
+							</div>
+							<div class="modal-body">
+								<p>Some text inaaaaaaaaaaaaaathe modal.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
 						</div>
 					</div>
 				</div>
