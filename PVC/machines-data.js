@@ -6,6 +6,7 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Description",
       "productsMenu": "Products",
       "contactsMenu": "Contacts",
+      "catalogTitle":"Machinery for PVC and Aluminium Doors and Windows",
       "trAddress":"Head office: Turkey, Bursa",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"Bulgaria, Kardzhali",
@@ -778,6 +779,7 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Описание",
       "productsMenu": "Продукти",
       "contactsMenu": "Контакти",
+      "catalogTitle":"Машини за ПВЦ и Алуминиева дограма",
       "trAddress":"Централен офис: Турция, Бурса",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"България, Кърджали",
@@ -1656,17 +1658,12 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Özellikler",
       "productsMenu": "Ürünler",
       "contactsMenu": "İletişim",
+      "catalogTitle":"PVC ve Alüminium Doğrama makinaları",
       "trAddress":"Merkez ofis: Türkiye, Bursa",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"Bulgaristan, Kırcaali",
       "bgEmail":"pvc.mashini.bulgaria@gmail.com",
       "machines": [
-        {
-          "title": "Kompresör 500 Lt",
-          "imageUrl": "http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/compresor-300.jpg",
-          "decription": [],
-          "technicalDetails": []
-        },
         {
           "title": "Otomatik PVC ve AL orta kayıt profili alıştırma makinası (seri bıçak sistemi)",
           "imageUrl": "http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/AMM-01-300.jpg",
@@ -2312,6 +2309,12 @@ const machinesData = JSON.parse(`{
           ]
         },
         {
+          "title": "Kompresör 500 Lt",
+          "imageUrl": "http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/compresor-300.jpg",
+          "decription": [],
+          "technicalDetails": []
+        },
+        {
           "title": "Masaüstü Kaynak Makinası",
           "imageUrl": "http://www.pvc-mashini.com/wp-content/uploads/ngg_featured/nastolna-300.png",
           "decription": [],
@@ -2410,6 +2413,7 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Описание",
       "productsMenu": "Продукты",
       "contactsMenu": "Контакты",
+      "catalogTitle":"Оборудование Для ПВХ и Алюминиевые Окна",
       "trAddress":"Головной офис: Турция, Бурса",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"Болгария, Кырджали",
@@ -3187,6 +3191,7 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Opis",
       "productsMenu": "Proizvodi",
       "contactsMenu": "Kontakti",
+      "catalogTitle":"Mašine za proizvodnju PVC i AL stolarije",
       "trAddress":"Glavni ured: Turska, Bursa",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"Bulgaria, Kardzhali",
@@ -3785,6 +3790,7 @@ const machinesData = JSON.parse(`{
       "descriptionTabName": "Опис",
       "productsMenu": "Proizvodi",
       "contactsMenu": "Контакти",
+      "catalogTitle":"Пвц и Алуминиумска столарија",
       "trAddress":"Главен канцеларија: Турциja, Бурса",
       "trEmail":"info.pvc.mashini@gmail.com",
       "bgAddress":"Булгариja, Крџали",
@@ -4376,6 +4382,7 @@ const machinesData = JSON.parse(`{
       "detailsTabName": "تفاصيل تقنية",
       "descriptionTabName": "وصف",
       "productsMenu": "منتجات",
+      "catalogTitle":"Machinery for PVC and Aluminium Doors and Windows",
       "contactsMenu": "جهات الاتصال",
       "trAddress":"Head office: Turkey, Bursa",
       "trEmail":"info.pvc.mashini@gmail.com",

@@ -73,7 +73,7 @@ function renderCatalogSection() {
 	const subscribMarkup = `
 		<section id="catalog">
 			<div class="container">
-				<h1 class="text-center">${bbbbbbbbb.productsMenu}</h1>
+				<h1 class="text-center">${bbbbbbbbb.catalogTitle}</h1>
 			</div>
 		</section>
 	`;
